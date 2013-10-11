@@ -1,0 +1,42 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name='camera'>
+	<static>false</static>
+	<!--pose>0 0 .1 0 0 0</pose-->
+
+    <link name='the_camera'>
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>1e-9</mass>
+        <inertia>
+          <ixx>1e-10</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1e-10</iyy>
+          <iyz>0</iyz>
+          <izz>1e-10</izz>
+        </inertia>
+      </inertial>
+      <collision name='camera_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>.02 .02 .02 </size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='camera_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size> .02 .02 .02 </size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      
+  </model>
+</sdf>
