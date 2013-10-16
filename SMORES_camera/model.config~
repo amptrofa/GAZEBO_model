@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <model>
-  <name>camera</name>
+  <name>SMORES_camera</name>
   <version>4.0</version>
   <sdf version='1.4'>camera.sdf</sdf>
 
   <author>
-   <name>Edward Cui</name>
-   <email>cyk1990995@gmail.com</email>
+   <name>Adam Trofa</name>
+   <email>amt225@cornell.edu</email>
   </author>
 
   <description>
-    Trying to make a camera model
+    Camera model for SMORES
   </description>
 </model>

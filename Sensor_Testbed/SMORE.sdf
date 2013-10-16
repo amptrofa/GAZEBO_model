@@ -5,7 +5,7 @@
 	<!--pose>0 0 .1 0 0 0</pose-->
 
     <include>
-      <uri>model://SMORES_camera/model</uri>
+      <uri>model://SMORES_camera</uri>
       <pose> 0 .05 .05 0 0 1.57 </pose>
     </include>
 
@@ -429,7 +429,7 @@
     
     <joint type="revolute" name="Camera_hinge">
       <pose>0 0 0 0 0 0</pose>
-      <child>camera::the_camera</child>
+      <child>SMORES_camera::model</child>
       <parent>UHolderBody</parent>
       <axis>
         <xyz>1 0 0</xyz>
