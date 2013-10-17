@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name='SMORES_range'>
+	<static>false</static>
+
+    <link name='model'>
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>1e-9</mass> <!-- Gazebo doesn't like massless models /-->
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <!--><collision name='range_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <plane>
+            <normal> 0 0 1 </normal>
+            <size> .04 .04 </size>
+          </plane>
+        </geometry>
+      </collision></-->
+      <visual name='range_visual'>
+        <pose>0 0 0 0 1.57 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>.01</radius>
+            <length>.02</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <sensor name="range_sensor" type="ray">
+        <pose> 0 0 0 0 0 0 </pose>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>1</samples>
+              <resolution>1</resolution>
+              <min_angle>-.1</min_angle>
+              <max_angle>.1</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>1</samples>
+              <resolution>1</resolution>
+              <min_angle>0</min_angle>
+              <max_angle>0</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>.001</min>
+            <max>1</max>
+            <resolution>.001</resolution>
+          </range>
+        </ray>
+        <always_on>1</always_on>
+        <update_rate>5</update_rate>
+        <visualize>false</visualize> <!-- Visualization doesn't work with 1 ray anyway /-->
+      </sensor>	
+    </link>
+      
+  </model>
+</sdf>

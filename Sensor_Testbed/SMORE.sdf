@@ -1,16 +1,10 @@
 <?xml version='1.0'?>
 <sdf version='1.4'>
-  <model name='SMORES_camera'>
+  <model name='SMORES_Sensor_Testbed'>
 	<static>false</static>
 	<!--pose>0 0 .1 0 0 0</pose-->
 
-    <include>
-      <uri>model://SMORES_camera</uri>
-      <pose> 0 .05 .05 0 0 1.57 </pose>
-    </include>
-
-
-    <link name='CircuitHolder'>
+      <link name='CircuitHolder'>
       <pose>0 0 .05 0 0 0</pose>
       <inertial>
         <pose>0.00799044 -0.00824713 0.00675345 0 -0 0</pose>
@@ -427,18 +421,6 @@
 
     <!-- Here come the joints -->
     
-    <joint type="revolute" name="Camera_hinge">
-      <pose>0 0 0 0 0 0</pose>
-      <child>SMORES_camera::model</child>
-      <parent>UHolderBody</parent>
-      <axis>
-        <xyz>1 0 0</xyz>
-        <limit>
-          <lower>0</lower>
-          <upper>0</upper>
-        </limit>
-      </axis>
-    </joint>
     <joint type="revolute" name="Right_wheel_hinge">
       <pose>0.045 0 0 0 0 0</pose>
       <child>RightWheel</child>
@@ -502,6 +484,104 @@
         </ode>
       </physics>
     </joint>
+    
+
+
+    <!-- Camera >
+    <include>
+      <uri>model://SMORES_camera</uri>
+      <pose> 0 .05 .05 0 0 1.57 </pose>
+    </include>
+    <joint type="revolute" name="Camera_hinge">
+      <pose>0 0 0 0 0 0</pose>
+      <child>SMORES_camera::model</child>
+      <parent>UHolderBody</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+    </joint>
+    </-->
+
+    <!-- IMU >
+    <include>
+      <uri>model://SMORES_IMU</uri>
+      <pose> 0 0 .1 0 0 0 </pose>
+    </include>
+    <joint type="revolute" name="IMU_hinge">
+      <pose>0 0 0 0 0 0</pose>
+      <child>SMORES_IMU::model</child>
+      <parent>CircuitHolder</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+    </joint>
+    </-->
+    
+    <!-- Contact >
+    <include>
+      <uri>model://SMORES_contact</uri>
+      <pose> 0 -.07 .05 1.57 0 0 </pose>
+    </include>
+    <joint type="revolute" name="Contact_hinge">
+      <pose>0 0 0 0 0 0</pose>
+      <child>SMORES_contact::model</child>
+      <parent>CircuitHolder</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+    </joint>
+    </-->
+
+    <!-- Range >
+    <include>
+      <uri>model://SMORES_range</uri>
+      <pose> 0 -.05 .05 0 0 -1.57 </pose>
+    </include>
+    <joint type="revolute" name="range_hinge">
+      <pose>0 0 0 0 0 0</pose>
+      <child>SMORES_range::model</child>
+      <parent>CircuitHolder</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+    </joint>
+    </-->
+
+    <!-- LIDAR /-->
+    <include>
+      <uri>model://SMORES_LIDAR</uri>
+      <pose> 0 0 .1 0 0 -1.57 </pose>
+    </include>
+    <joint type="revolute" name="range_hinge">
+      <pose>0 0 0 0 0 0</pose>
+      <child>SMORES_LIDAR::model</child>
+      <parent>CircuitHolder</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+    </joint>
+    
+
 
     <plugin name="ModelController1" filename="plugins/libControllerPro1.so"/>
   </model>
