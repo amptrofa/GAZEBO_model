@@ -506,6 +506,24 @@
     </joint>
     </-->
 
+    <!-- Depth /-->
+    <include>
+      <uri>model://SMORES_depth</uri>
+      <pose> 0 .05 .05 0 0 1.57 </pose>
+    </include>
+    <joint type="revolute" name="Depth_hinge">
+      <pose>0 0 0 0 0 0</pose>
+      <child>SMORES_depth::model</child>
+      <parent>UHolderBody</parent>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+        </limit>
+      </axis>
+    </joint>
+
     <!-- IMU >
     <include>
       <uri>model://SMORES_IMU</uri>
@@ -563,7 +581,7 @@
     </joint>
     </-->
 
-    <!-- LIDAR /-->
+    <!-- LIDAR >
     <include>
       <uri>model://SMORES_LIDAR</uri>
       <pose> 0 0 .1 0 0 -1.57 </pose>
@@ -580,7 +598,7 @@
         </limit>
       </axis>
     </joint>
-    
+    </-->
 
 
     <plugin name="ModelController1" filename="plugins/libControllerPro1.so"/>
