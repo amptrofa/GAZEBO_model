@@ -59,16 +59,6 @@
         <update_rate>1</update_rate>
         <visualize>true</visualize>
         <plugin name="depth_camera_plugin" filename="plugins/libDepthCameraCustom.so" />
-        <!-->
-        <plugin name="depth_camera_plugin" filename="libDepthCameraPlugin.so">
-          <CxPrime>0</CxPrime>
-          <cameraName>depth_camera_name</cameraName>
-          <frameName>/frame_name</frameName>
-          <image_topic_name>imgTopic</image_topic_name>
-          <point_cloud_topic_name>pointCloudTopic</point_cloud_topic_name>
-          <camera_info_topic_name>depth_camera_info_topic</camera_info_topic_name>
-        </plugin>
-        </-->
       </sensor>	
     </link>
       
