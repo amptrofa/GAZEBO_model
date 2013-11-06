@@ -1,19 +1,149 @@
 <?xml version="1.0"?>
 <sdf version='1.4'>
   <model name='hexapod'>
-  
-    <!-- Center body /-->
+	<!--pose>0 0 .1 0 0 0</pose-->
+
+    <!-- Body Center -->
     <include>
-      <name>cb0</name>
+      <name>bc0</name>
       <uri>model://SMORES5Jon</uri>
-      <pose>0 0 0 0 0 0</pose>
+      <pose>0 0 0 0 0 1.57</pose>
     </include>
     
-    <!-- Front body /-->
+    <!-- Middle Left Leg -->
+    <include>
+      <name>ml0</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>0 .2 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>ml1</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>0 .4 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>ml2</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>0 .6 0 0 0 0</pose>
+    </include>
+ 
+    <!-- Middle Right Leg -->
+    <include>
+      <name>mr0</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>0 -.2 0 0 0 3.141592</pose>
+    </include>
+    <include>
+      <name>mr1</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>0 -.4 0 0 0 3.141592</pose>
+    </include>
+    <include>
+      <name>mr2</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>0 -.6 0 0 0 3.141592</pose>
+    </include>
+
+    <!-- Rear Body -->
+    <include>
+      <name>rb0</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>-.2 0 0 0 0 1.5707546</pose>
+    </include>
+    <include>
+      <name>rb1</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>-.4 0 0 0 0 1.5707546</pose>
+    </include>
+    <include>
+      <name>rb2</name>  
+      <uri>model://SMORES5Jon</uri>
+      <pose>-.6 0 0 0 0 1.5707546</pose>
+    </include>
+
+    <!-- Rear Right Leg -->
+    <include>
+      <name>rr0</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>-.3 -.2 0 0 0 3.141592</pose>
+    </include>
+    <include>
+      <name>rr1</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>-.3 -.4 0 0 0 3.141592</pose>
+    </include>
+    <include>
+      <name>rr1</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>-.3 -.6 0 0 0 3.141592</pose>
+    </include>
+
+    <!-- Rear Left Leg -->
+    <include>
+      <name>rl0</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>-.3 .2 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>rl1</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>-.3 .4 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>rl2</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>-.3 .6 0 0 0 0</pose>
+    </include>
+    
+    <!-- Front Body -->
     <include>
       <name>fb0</name>
       <uri>model://SMORES5Jon</uri>
-      <pose>.2 0 0 0 0 0</pose>
+      <pose>.2 0 0 0 0 1.5707546</pose>
+    </include>
+    <include>
+      <name>fb1</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>.4 0 0 0 0 1.5707546</pose>
+    </include>
+    <include>
+      <name>fb2</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>.6 0 0 0 0 1.5707546</pose>
+    </include>
+    
+    <!-- Front Right Leg -->
+    <include>
+      <name>fr0</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>.3 -.2 0 0 0 3.141592</pose>
+    </include>
+    <include>
+      <name>fr1</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>.3 -.4 0 0 0 3.141592</pose>
+    </include>
+    <include>
+      <name>fr2</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>.3 -.6 0 0 0 3.141592</pose>
+    </include>
+
+    <!-- Front Left Leg -->
+    <include>
+      <name>fl0</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>.3 .2 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>fl1</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>.3 .4 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>fl2</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>.3 .6 0 0 0 0</pose>
     </include>
     
   </model>
