@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<sdf version='1.4'>
+  <model name='hexapod'>
+  
+    <!-- Center body /-->
+    <include>
+      <name>cb0</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    
+    <!-- Front body /-->
+    <include>
+      <name>fb0</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>.2 0 0 0 0 0</pose>
+    </include>
+    
+  </model>
+</sdf>
