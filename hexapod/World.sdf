@@ -1,0 +1,18 @@
+<?xml version ='1.0'?>
+<sdf version ='1.4'>
+  <world name='default'>
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <plugin filename="plugins/libSuperServer.so" name="ControlCenter"/>
+    <plugin filename="plugins/libSMORESLoader.so" name="Hexapod1">
+      <uri>model://hexapod</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </plugin>
+  </world>
+</sdf>
