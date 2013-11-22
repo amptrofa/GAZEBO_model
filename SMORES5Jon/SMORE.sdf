@@ -3,8 +3,11 @@
   <model name='SMORES5Jon'>
 	<static>false</static>
 	<!--pose>0 0 .1 0 0 0</pose-->
-
+    
+    <plugin name='ModelController' filename='plugins/libControllerPro1.so' />
+    
     <link name='CircuitHolder'>
+      <self_collide>true</self_collide>
       <pose>0 0 .05 0 0 0</pose>
       <inertial>
         <pose>0.00799044 -0.00824713 0.00675345 0 -0 0</pose>
@@ -68,6 +71,7 @@
     </link>
 
 		<link name='UHolderBody'>
+      <self_collide>true</self_collide>
       <pose>0 0 .05 0 0 0</pose>
 			<inertial>
         <pose>0 0.0306753 0 0 0 0</pose>
@@ -163,6 +167,7 @@
     </link>
 
 		<link name='FrontWheel'>
+      <self_collide>true</self_collide>
       <pose>0 0 .05 0 0 0</pose>
 			<inertial>
         <pose>0 -0.0436519 0 0 0 0</pose>
@@ -259,6 +264,7 @@
     </link>
 
 		<link name='LeftWheel'>
+      <self_collide>true</self_collide>
       <pose>0 0 .05 0 0 0</pose>
 			<inertial>
         <pose>0.0457825 0 0 0 -0 0</pose>
@@ -355,6 +361,7 @@
     </link>
 
 		<link name='RightWheel'>
+      <self_collide>true</self_collide>
       <pose>0 0 0.05 0 0 3.141593</pose>
 			<inertial>
         <pose>-0.0457825 0 0 0 -0 0</pose>
@@ -513,7 +520,6 @@
         </ode>
       </physics>
     </joint>
-
-    <plugin name="ModelController" filename="plugins/libControllerPro1.so"/>
+       
   </model>
 </sdf>
