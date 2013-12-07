@@ -161,7 +161,6 @@
           <contact>
             <collision>UHolderBody_collision</collision>
           </contact>
-          <plugin name="my_plugin" filename="plugins/libcontact.so"/>
       </sensor>
 
     </link>
@@ -259,7 +258,6 @@
           <contact>
             <collision>FrontWheel_collision</collision>
           </contact>
-          <plugin name="my_plugin" filename="plugins/libcontact.so"/>
       </sensor>
     </link>
 
@@ -355,7 +353,6 @@
           <contact>
             <collision>LeftWheel_collision</collision>
           </contact>
-          <plugin name="my_plugin" filename="plugins/libcontact.so"/>
       </sensor>
 
     </link>
@@ -450,7 +447,6 @@
           <contact>
             <collision>RightWheel_collision</collision>
           </contact>
-          <plugin name="my_plugin" filename="plugins/libcontact.so"/>
       </sensor>
 
     </link>
