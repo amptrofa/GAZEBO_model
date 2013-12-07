@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<sdf version='1.4'>
+  <model name='hexapod2'>
+	<!--pose>0 0 .1 0 0 0</pose-->
+
+    
+    <include>
+        <name>bodyCenter</name>
+        <uri>model://SMORES5Jon</uri>
+        <pose>0 0 0 0 0 1.5707546</pose>
+    </include>
+    
+    <include>
+      <name>middleLeftLeg</name>
+      <uri>model://legTight</uri>
+      <pose>0 .3 0 0 0 -1.5707546</pose>
+    </include>
+    
+    <include>
+      <name>middleRightLeg</name>
+      <uri>model://legTight</uri>
+      <pose>0 -.3 0 0 0 1.5707546</pose>
+    </include>
+    
+    <include>
+      <name>rearBody</name>
+      <uri>model://legTight</uri>
+      <pose>-.3 0 0 0 0 0</pose>
+    </include>
+    
+
+    <include>
+      <name>rearRightLeg</name>
+      <uri>model://legTight</uri>
+      <pose>-.2 -.3 0 0 0 1.570746</pose>
+    </include>
+    
+    <include>
+      <name>rearLeftLeg</name>
+      <uri>model://legTight</uri>
+      <pose>-.2 .3 0 0 0 -1.570746</pose>
+    </include>
+    
+    <include>
+      <name>frontBody</name>
+      <uri>model://legTight</uri>
+      <pose>.1 0 0 0 0 0</pose>
+    </include>
+    
+    <include>
+      <name>frontRightLeg</name>
+      <uri>model://legTight</uri>
+      <pose>.2 -.3 0 0 0 1.570746</pose>
+    </include>
+    
+    <include>
+      <name>frontLeftLeg</name>
+      <uri>model://legTight</uri>
+      <pose>.2 .3 0 0 0 -1.570746</pose>
+    </include>
+
+    
+  </model>
+</sdf>
