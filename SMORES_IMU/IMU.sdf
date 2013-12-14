@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name='SMORES_IMU'>
+	<static>false</static>
+
+    <link name='model'>
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>1e-9</mass> <!-- Gazebo doesn't like massless models /-->
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+      <!--><collision name='IMU_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>.02 .02 .02 </size>
+          </box>
+        </geometry>
+      </collision></-->
+      <visual name='IMU_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size> .02 .02 .02 </size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <sensor name="IMU" type="imu">
+        <imu>
+        </imu>
+        <always_on>1</always_on>
+        <visualize>true</visualize>
+      </sensor>	
+    </link>
+      
+  </model>
+</sdf>
