@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<sdf version='1.4'>
+  <model name='legTight'>
+	<!--pose>0 0 .1 0 0 0</pose-->
+    
+    <include>
+      <name>0</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>0 0 0 0 0 1.57</pose>
+    </include>
+    
+    <include>
+      <name>1</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>.1 0 0 0 0 1.57</pose>
+    </include>
+    
+    <include>
+      <name>2</name>
+      <uri>model://SMORES5Jon</uri>
+      <pose>.2 0 0 0 0 1.57</pose>
+    </include>
+    
+  </model>
+</sdf>
