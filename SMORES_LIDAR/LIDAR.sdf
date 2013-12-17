@@ -38,15 +38,15 @@
           <ambient>1 0 0 1</ambient>
         </material>
       </visual>
-      <sensor name="range_sensor" type="ray">
+      <sensor name="LIDAR_sensor" type="ray">
         <pose> 0 0 0 0 0 0 </pose>
         <ray>
           <scan>
             <horizontal>
               <samples>360</samples>
               <resolution>1</resolution>
-              <min_angle>-3.14</min_angle>
-              <max_angle>3.14</max_angle>
+              <min_angle>-1</min_angle>
+              <max_angle>1</max_angle>
             </horizontal>
             <vertical>
               <samples>1</samples>
